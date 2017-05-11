@@ -40,7 +40,7 @@ class ViewController: UIViewController {
             alertController.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { (action) in
                 alertController.dismiss(animated: true, completion: nil)
                 //textOutputLabel = "No"
-                self.textOutputLabel.text = "Yes"
+                self.textOutputLabel.text = "No"
                 print("NO")
             }))
         
