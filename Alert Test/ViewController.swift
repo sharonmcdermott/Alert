@@ -9,12 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var textYesOrNo = ""
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    
+    
+    @IBOutlet weak var textOutputLabel: UILabel!
+    
+
     
     @IBAction func buttonTapped(_ sender: UIButton) {
 
@@ -23,19 +31,33 @@ class ViewController: UIViewController {
             //creating a button
             alertController.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { (action) in
                 alertController.dismiss(animated: true, completion: nil)
+                //textOutputLabel = "Yes"
+                self.textOutputLabel.text = "Yes"
                 print("YES")
             }))
             
             
             alertController.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { (action) in
                 alertController.dismiss(animated: true, completion: nil)
+                //textOutputLabel = "No"
+                self.textOutputLabel.text = "Yes"
                 print("NO")
             }))
-            
+        
             self.present(alertController, animated: true, completion: nil)
         }
+    
+    /*
+     If alertController.addAction.title = "Yes" {
+     self.textOutputLabel.text = "Yes"
+     }
+     If alertController.addAction.title = "Yes" {
+     self.textOutputLabel.text = "Yes"
+     }
 
-
+    
+}
+     */
 
 /*
     func createAlert (title:String, message:String) {
